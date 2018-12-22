@@ -1,0 +1,38 @@
+
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">TITRE</th>
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col">PRIX</th>
+                <th scope="col">CATEGORIE</th>
+                <th scope="col">MODIFIER</th>
+                <th scope="col">SUPPRIMER</th>
+                <th scope="col">like</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let article of articles " >
+                <th scope="row">{{ article.id }}</th>
+                <td>{{ article.title }}</td>
+                <td>{{ article.description }}</td>
+                <td>{{ article.prix }}</td>
+                <td>{{ article.categorie.nom }}</td>
+                <td> <a (click)="onEditer(article)" class="align-middle"><i class="fa fa-edit" aria-hidden="true"></i></a> </td>
+            <td> <a (click)="onSupprimer(article)" style="color:red;"><i class="fa fa-trash" aria-hidden="true"></i></a> </td>
+            <td ><div class="rating" >
+                <a href="#5" title="Donner 5 étoiles">☆</a>
+                <a href="#4" title="Donner 4 étoiles">☆</a>
+              <a href="#3" title="Donner 3 étoiles">☆</a>
+              <a href="#2" title="Donner 2 étoiles">☆</a>
+              <a href="#1" title="Donner 1 étoile">☆</a>
+             </div></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/add-article.component.html" >creerArticle</a>
+
+</div>

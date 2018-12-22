@@ -1,0 +1,15 @@
+tr td{
+    cursor: pointer ;
+}
+
+.line{
+    width: 80px;
+    height: 3px;
+    background-color: #fbb710;
+    margin-bottom: 15px;
+    display: block; 
+}
+
+.container{
+    margin-top: 50px ;
+}
